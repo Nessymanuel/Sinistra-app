@@ -32,6 +32,16 @@
   box-sizing: border-box;
 }
 
+/* Paleta do template */
+:root {
+  --hero-bg: #0b1220; /* muito escuro */
+  --hero-accent: #00d18a; /* verde vibrante */
+  --muted: #94a3b8;
+  --section-bg: #ffffff;
+  --footer-bg: #07101a;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -63,6 +73,45 @@ p {
 /* Utilities for consistent spacing and styling */
 .container {
   @apply max-w-6xl mx-auto px-4;
+}
+
+/* Reusable card style for sections */
+.section-card {
+  @apply bg-white border border-gray-100 rounded-lg p-6 shadow-sm;
+}
+
+/* Hero dark variant */
+.hero-dark {
+  background: linear-gradient(180deg, rgba(11,18,32,1) 0%, rgba(6,10,17,1) 100%);
+}
+
+.hero-illustration {
+  @apply rounded-lg p-6 flex items-center justify-center;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-gradient-to-r from-[#00d18a] to-[#06b6d4] text-white px-5 py-3 rounded-full text-sm shadow-lg hover:opacity-95;
+}
+
+.btn-secondary {
+  @apply border border-slate-200 bg-white/5 text-white px-5 py-3 rounded-full text-sm hover:bg-white/10;
+}
+
+/* Footer */
+.footer-dark {
+  background: var(--footer-bg);
+  color: #d1e7df;
+}
+
+/* Utility tweaks for hero on top of header */
+.header-transparent a,
+.header-transparent .nav-pill {
+  color: #ffffff !important;
+}
+
+.header-transparent .inline-flex[aria-label="Abrir menu"] {
+  background: rgba(255,255,255,0.06) !important;
 }
 
 /* Smooth transitions */
